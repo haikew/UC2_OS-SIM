@@ -21,33 +21,19 @@ This project is based on the hardware and methodology from [openMLA/photon-ultra
 
 ---
 
-## ⚠️ Important Notes
-
-### About main.py
-**`src/main.py` is legacy OpenMLA test code and is NOT part of the current workflow.**
-
-The actual entry point is **`src/dmdfastapi.py`**, which:
-- Auto-starts the FastAPI server
-- Provides REST API for pattern control
-- Handles DMD communication
-- Supports image display and sequence management
-
-Do not use `main.py` for production. It's kept for reference only.
-
----
-
 ## Quick Start
 
 ### Prerequisites
-- Raspberry Pi Zero 2W (or compatible)
+- Raspberry Pi Zero 2W (Bullseye)
 - TI DLPC1438 DMD Controller
+- Board from photon-ultra-controller
 - Python 3.9+
 
 ### Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/uc2dmd.git
+   git clone https://github.com/haikew/UC2_OS-SIM.git
    cd uc2dmd
    ```
 
@@ -78,13 +64,11 @@ uc2dmd/
 │   ├── api_documentation.md           # FastAPI endpoint reference
 │   ├── get_raspberry_pi_zero_2w_ip_through_usb.md  # USB network setup
 │   ├── repair_ics.md                  # Windows ICS troubleshooting
-│   ├── index.md                       # Documentation navigation
 │   ├── cmdline_backup.txt             # Kernel command line backup
 │   └── config_backup.txt              # Config.txt backup
 ├── src/                               # Main source code
 │   ├── dmdfastapi.py                 # Auto-launching FastAPI server (MAIN ENTRY POINT)
-│   ├── main.py                       # ⚠️ LEGACY: OpenMLA test code (do not use)
-│   ├── dmd_RGB565.py                 # RGB565 image processing
+│   ├── main.py                       # OpenMLA test code 
 │   ├── dmd_fastapi_image/            # API image serving directory
 │   └── UV_projector/
 │       ├── controller.py             # DLPC1438 DMD controller interface
@@ -203,22 +187,5 @@ If you experience unstable DMD refresh rates or display flickering during config
 ### Testing the Reconstruction Pipeline
 1. Run `ossim_reconstruction_gui.py`
 2. Select three phase-shifted test images
-3. Adjust parameters and observe real-time preview
-4. Export results for analysis
+3. Export results for analysis
 
-## References
-
-- Texas Instruments DLPC1438 Datasheet
-- Raspberry Pi DPI Documentation
-- Structured Illumination Microscopy Theory
-
-## License
-
-See LICENSE file
-
-## Contributing
-
-Contributions welcome! Please ensure:
-- Code follows PEP 8 style guidelines
-- All Python files are fully commented in English
-- Documentation is comprehensive and professional
