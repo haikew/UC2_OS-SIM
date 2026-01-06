@@ -1,6 +1,24 @@
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
+# Core dependencies
 numpy==1.24.3
 Pillow==10.0.1
+matplotlib==3.8.0
+
+# Image processing and computer vision
+opencv-python==4.8.0.74
+scikit-image==0.21.0
+tifffile==2023.9.26
+
+# FastAPI and web server (optional, for DMD FastAPI controller)
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Raspberry Pi and I2C (optional, hardware-specific)
 RPi.GPIO==0.7.1
 smbus==1.1
+
+# Jupyter notebook support (optional, for interactive notebooks)
+ipywidgets==8.1.1
+ipython==8.15.0
+
+# Drag-and-drop support in GUI (optional, for tkinterdnd2)
+tkinterdnd2==0.3.0
