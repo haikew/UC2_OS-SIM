@@ -13,7 +13,7 @@ jobs:
       contents: write # 赋予 Action 写入权限
     steps:
       - name: checkout-repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: run-ghrs
         uses: jgehrcke/github-repo-stats@v1.4.2
